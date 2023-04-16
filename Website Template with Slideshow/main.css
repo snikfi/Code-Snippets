@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, p {
+    font-family: 'Karla', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+    overflow: hidden;
+}
+#left {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#right {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+}
+
+#name {
+    font-size: 4rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 800;
+}
+
+#description {
+    max-width: 250px;
+    font-family: 'Karla', sans-serif;
+    font-size: 0.7rem;
+    margin-top: 20px;
+}
+
+
+#links {
+    font-family: 'Karla', sans-serif;
+    font-size: 0.7rem;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#links a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+#links a:hover {
+    color: #000;
+}
+
+#slideshow {
+    position: relative;
+    width: 500px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }  
+  
+.slide {
+    opacity: 0;
+    transition: opacity 1s ease;
+    position: absolute;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* Media queries for responsive design */
+
+@media screen and (max-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+        overflow: hidden;
+    }
+
+    #left {
+        width: 100%;
+        height: auto;
+        order: 1;
+        padding: 50px;
+        box-sizing: border-box;
+    }
+
+    #right {
+        order: 2;
+        background-color: #ccc;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 20px; /* Add top padding to avoid overlapping */
+    }
+
+    #slideshow {
+        width: 100%; /* Set slideshow width to 100% */
+        height: auto;
+    }
+
+    .slide-image {
+        max-width: 100%; /* Set image width to 100% of container */
+        height: auto;
+    }
+}
