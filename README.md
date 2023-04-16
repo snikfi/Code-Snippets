@@ -1,0 +1,2 @@
+# Code Snippets
+ Welcome to my collection of code snippets and small projects! This repo is a place for me to store quick fixes, experiments, and small projects that don't warrant their own repositories. Here, you'll find a variety of code snippets that solve common problems and mini-projects that demonstrate specific concepts or techniques. Feel free to browse the code, suggest improvements, or use the snippets in your own projects. I hope you find this collection useful!
