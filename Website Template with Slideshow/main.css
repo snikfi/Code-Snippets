@@ -67,9 +67,9 @@ h1, h2, h3, h4, h5, p {
 }
 
 #slideshow {
+    width: 100%;
+    height: 100%;
     position: relative;
-    width: 500px;
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,10 +94,9 @@ h1, h2, h3, h4, h5, p {
     background-size: cover;
 }
 
-
 /* Media queries for responsive design */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
     .container {
         display: grid;
         grid-template-columns: 1fr;
@@ -125,12 +124,15 @@ h1, h2, h3, h4, h5, p {
     }
 
     #slideshow {
-        width: 100%; /* Set slideshow width to 100% */
-        height: auto;
+        height: 70vh;
     }
 
+}
+
+@media screen and (orientation: landscape ) and (max-width: 1000px) {
     .slide-image {
-        max-width: 100%; /* Set image width to 100% of container */
-        height: auto;
+        width: 200px;
+        height: 200px;
     }
 }
+
